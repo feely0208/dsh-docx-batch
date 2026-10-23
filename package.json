@@ -1,0 +1,19 @@
+{
+  "name": "@deepwhale-cn/dsh-docx-batch",
+  "version": "0.1.0",
+  "description": "Word 批量替换 / 合并 / 提取文本 / 页眉页脚 / 转 Markdown，一次处理整目录",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["dsh", "dsh-plugin", "deepseek-harness", "skill", "tool", "docx-batch"],
+  "files": ["lib", "bin", "skill", "cordis.patch.yml", "tests/fixtures", "README.md", "LICENSE"],
+  "main": "./lib/index.js",
+  "exports": { ".": "./lib/index.js", "./package.json": "./package.json" },
+  "bin": { "dsh-docx-batch": "./bin/cli.mjs" },
+  "engines": { "dsh": ">=0.1.0-rc.6 <0.3.0", "node": ">=18" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "dependencies": { "@deepwhale-cn/dsh-guard-core": "^0.5.1" },
+  "peerDependencies": { "@deepseek-ai/dsh-skill": "*" },
+  "repository": { "type": "git", "url": "git+https://github.com/feely0208/dsh-docx-batch.git" },
+  "homepage": "https://www.deepwhale.org.cn/skills.html",
+  "bugs": { "url": "https://github.com/feely0208/dsh-docx-batch/issues" }
+}
